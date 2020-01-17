@@ -4,6 +4,7 @@ import { Steps, Icon } from "antd";
 
 import { Foot } from "../../components/Foot";
 import "./car.less";
+
 const Step = Steps.Step;
 
 export class Shopcar extends React.Component {
@@ -246,7 +247,7 @@ export class Shopcar extends React.Component {
   };
 
   render() {
-    let { list, sheng_list, shiList, quList, current } = this.state;
+    let { list, sheng_list, shiList, quList } = this.state;
     let domcar = [];
     if (list != null) {
       domcar = list.map((car, i) => (
@@ -262,7 +263,7 @@ export class Shopcar extends React.Component {
           <dl className="right clr">
             <dd>{car.goodsname}</dd>
             <dd>
-              <img src={car.src} />
+              <img src={car.src} alt="" />
             </dd>
             <dd>¥：{car.newprice}元</dd>
             <dt className="num">
@@ -308,7 +309,8 @@ export class Shopcar extends React.Component {
       <div>
         <div className="mycar clr">
           <div className="left">
-            <img src={require("../../img/gowu.png")}></img>我的购物车
+            <img src={require("../../img/gowu.png")} alt="" />
+            我的购物车
           </div>
           <div className="jidu">
             <Steps>

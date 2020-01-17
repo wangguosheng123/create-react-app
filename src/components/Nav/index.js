@@ -76,7 +76,10 @@ export class Nav extends React.Component {
         <Layout className="layout">
           <Header>
             <div className="logo">
-              <img src="http://i4.vanclimg.com/cms/20160923/logo18546.png"></img>
+              <img
+                src="http://i4.vanclimg.com/cms/20160923/logo18546.png"
+                alt=""
+              ></img>
             </div>
             <Menu
               // theme="dark"

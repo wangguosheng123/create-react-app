@@ -5,7 +5,6 @@ import { Button } from "antd";
 import "./detail.less";
 
 import { Foot } from "../../components/Foot";
-import { from } from "rxjs";
 
 export class Detail extends React.Component {
   constructor(props) {
@@ -21,7 +20,7 @@ export class Detail extends React.Component {
     let goodsid = this.props.match.params.goodsid;
     console.log(goodsid);
     axios.get("/liebiao.json").then(({ data }) => {
-      for (var i = 0; i < data.list.length; i++) {
+      for (let i = 0; i < data.list.length; i++) {
         let goodsID = data.list[i].goodsID;
         if (goodsid == goodsID) {
           console.log(data.list[i]);
@@ -46,7 +45,7 @@ export class Detail extends React.Component {
       if (userid != null) {
         let userids = localStorage.getItem(userid);
         userids = JSON.parse(userids);
-        for (var i = 0; i < shu.length; i++) {
+        for (let i = 0; i < shu.length; i++) {
           let item = shu[i];
           if (item.goodsID == goodid) {
             item.num = 1;
@@ -54,14 +53,14 @@ export class Detail extends React.Component {
             goods1 = item;
           }
         }
-        if (userids == null || userids.length == 0) {
+        if (userids == null || userids.length === 0) {
           //如果没有存 则直接添加新值
           // console.log(goods1)
           list.push(goods1);
         } else {
           //如果之前存过值 则将原来的值取出来 转换成数组
           //再加入新的值
-          for (var i = 0; i < userids.length; i++) {
+          for (let i = 0; i < userids.length; i++) {
             let numitem = userids[i];
             if (numitem.goodsID == goodid) {
               // console.log(numitem.goodsID)
@@ -116,7 +115,7 @@ export class Detail extends React.Component {
         } else {
           //如果之前存过值 则将原来的值取出来 转换成数组
           //再加入新的值
-          for (var i = 0; i < userids.length; i++) {
+          for (let i = 0; i < userids.length; i++) {
             let numitem = userids[i];
             if (numitem.goodsID == goodid) {
               // console.log(numitem.goodsID)
@@ -158,7 +157,7 @@ export class Detail extends React.Component {
             <div id="fd">
               <div id="wrap">
                 <div id="content">
-                  <img src={goods.src} id="smallImg" />
+                  <img src={goods.src} id="smallImg" alt="" />
                 </div>
 
                 <div id="fdzhinan">

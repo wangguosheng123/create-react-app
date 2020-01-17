@@ -25,9 +25,9 @@ class NormalLoginForm extends React.Component {
               flag = true;
               alert("恭喜您，登录成功");
 
-              let token = localStorage.setItem("token", username);
+              localStorage.setItem("token", username);
               window.location.href = "./home";
-              window.location.reload();
+              // window.location.reload();
               return;
             } else {
               alert("密码输入错误，请重新输入");

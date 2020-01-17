@@ -1,12 +1,9 @@
-import { Link } from "react-router-dom";
 import React from "react";
-
 import ReactSwiper from "reactjs-swiper"; //
+import axios from "axios";
 
 // 引入swiper的css的样式
 // import "Swiper/dist/css/swiper.min.css";
-
-import axios from "axios";
 
 import "./banner.less";
 

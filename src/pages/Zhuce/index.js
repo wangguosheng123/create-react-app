@@ -1,23 +1,9 @@
-import {
-  Form,
-  Input,
-  Tooltip,
-  Icon,
-  Cascader,
-  Select,
-  Row,
-  Col,
-  Checkbox,
-  Button,
-  AutoComplete
-} from "antd";
+import { Form, Input, Checkbox, Button, AutoComplete } from "antd";
 import React from "react";
 
+import { Foot } from "../../components/Foot";
 import "./zhuce.less";
 
-import { Foot } from "../../components/Foot";
-
-const { Option } = Select;
 const AutoCompleteOption = AutoComplete.Option;
 
 class RegistrationForm extends React.Component {
@@ -148,7 +134,7 @@ class RegistrationForm extends React.Component {
       }
     };
 
-    const websiteOptions = autoCompleteResult.map(website => (
+    autoCompleteResult.map(website => (
       <AutoCompleteOption key={website}>{website}</AutoCompleteOption>
     ));
 
@@ -222,7 +208,9 @@ class RegistrationForm extends React.Component {
                 })(
                   <Checkbox>
                     我已经阅读
-                    <a style={{ marginRight: 120 }}>协议</a>
+                    <a href="javascript:;" style={{ marginRight: 120 }}>
+                      协议
+                    </a>
                   </Checkbox>
                 )}
                 已注册，去<a href="login">登录</a>

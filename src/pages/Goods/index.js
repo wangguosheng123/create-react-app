@@ -63,7 +63,7 @@ export class Goods extends React.Component {
         } else {
           //如果之前存过值 则将原来的值取出来 转换成数组
           //再加入新的值
-          for (var i = 0; i < userids.length; i++) {
+          for (let i = 0; i < userids.length; i++) {
             let numitem = userids[i];
             if (numitem.goodsID == goodid) {
               // console.log(numitem.goodsID)
@@ -113,7 +113,7 @@ export class Goods extends React.Component {
       glist.push(
         <li id="lbdianji" key={goods.goodsID}>
           <Link className="lbtu" to={`/detail/${goods.goodsID}`}>
-            <img src={goods.src} />
+            <img src={goods.src} alt="" />
           </Link>
           <p>商品名：{goods.goodsname}</p>
           <p>原价¥:{goods.price}元</p>
@@ -121,7 +121,7 @@ export class Goods extends React.Component {
             加入购物车
           </Button>
           <div id="lbding">
-            <img src={goods.src} />
+            <img src={goods.src} alt="" />
             <dl>
               <dd>商品名:{goods.goodsname}</dd>
               <dd>商品编号:{goods.goodsID}</dd>

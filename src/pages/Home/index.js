@@ -72,7 +72,7 @@ export class Home extends React.Component {
         <li key={goods.goodsID}>
           <Link to={`/detail/${goods.goodsID}`}>
             <div className="img-box">
-              <img src={goods.src} />
+              <img src={goods.src} alt="" />
             </div>
             <div className="content">
               <p className="p1">{goods.goodsname}</p>
@@ -89,7 +89,7 @@ export class Home extends React.Component {
         <li key={goods.goodsID}>
           <Link to={`/detail/${goods.goodsID}`}>
             <div className="img-box">
-              <img src={goods.src} />
+              <img src={goods.src} alt="" />
             </div>
           </Link>
         </li>
@@ -101,7 +101,7 @@ export class Home extends React.Component {
         <Banner />
         <dl id="miaosha">
           <dt>
-            <img src={require("../../img/djs.png")} />
+            <img src={require("../../img/djs.png")} alt="" />
             每日秒杀
           </dt>
           <dd>秒杀商品每个id限购一件</dd>
