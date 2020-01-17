@@ -1,0 +1,8 @@
+{
+    "list" : [
+        {"name":"商品1","price":98,"num":1},
+        {"name":"商品2","price":8,"num":2},
+        {"name":"商品3","price":9,"num":3},
+        {"name":"商品4","price":198,"num":1}
+    ]
+}

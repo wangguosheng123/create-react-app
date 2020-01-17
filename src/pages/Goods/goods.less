@@ -1,0 +1,148 @@
+/* //////列表正式开始 */
+
+#lbtou {
+  height: 30px;
+  overflow: hidden;
+  border-bottom: 1px solid red;
+}
+#lbtou span {
+  display: inline-block;
+  height: 30px;
+  width: 100px;
+  background-color: red;
+  color: #fff;
+  text-align: center;
+  line-height: 30px;
+}
+
+#lbxu {
+  height: 40px;
+  border: 1px solid #eee6ee;
+}
+
+#lbxu input {
+  margin-top: 10px;
+  height: 15px;
+  width: 15px;
+  margin-left: 30px;
+  line-height: 15px;
+}
+#lbxu #search {
+  width: 200px;
+  height: 20px;
+}
+#btn1 {
+  height: 25px;
+  width: 80px;
+  margin-right: 150px;
+}
+#lbxu img {
+  width: 16px;
+  height: 16px;
+  vertical-align: middle;
+}
+
+/* ////////商品类别生成开始 */
+/* ////////商品类别生成开始 */
+/* ////////商品类别生成开始 */
+#lbshangping {
+  width: 1200px;
+  margin: auto;
+  height: 730px;
+}
+#lbdianji {
+  margin: 5px 10px 5px 20px;
+  float: left;
+  height: 300px;
+  width: 200px;
+  position: relative;
+}
+
+#lbshangping li .lbtu {
+  display: inline-block;
+  width: 200px;
+  height: 200px;
+  img {
+    width: 200px;
+    height: 200px;
+  }
+}
+
+#lbshangping li p {
+  width: 200px;
+  height: 25px;
+  text-align: center;
+  line-height: 25px;
+  margin-bottom: 0;
+}
+#lbshangping li p:nth-child(3) {
+  text-decoration: line-through;
+  color: red;
+}
+#lbshangping button {
+  width: 100px;
+  height: 30px;
+  margin-left: 60px;
+  background-color: #a98f83;
+}
+#lbshangping button:hover {
+  background-color: rgb(253, 162, 162);
+}
+
+#lbdianji:hover #lbding {
+  display: block;
+}
+
+#lbding {
+  position: absolute;
+  top: 0;
+  left: 210px;
+  background-color: rgb(165, 158, 158);
+  width: 260px;
+  height: 370px;
+  z-index: 1;
+  display: none;
+}
+
+#lbshangping li:nth-child(5n) #lbding {
+  top: 0;
+  left: -265px;
+}
+#lbding img {
+  width: 260px;
+  height: 260px;
+}
+#lbding dd {
+  width: 260px;
+  height: 25px;
+  text-align: center;
+  line-height: 25px;
+}
+#lbding dt {
+  width: 260px;
+  height: 40px;
+  margin-top: 0;
+  text-align: center;
+  line-height: 40px;
+  font-size: 24px;
+  color: red;
+}
+
+/* ////////商品列表生成完成 */
+
+.fenye {
+  height: 50px;
+  margin: auto;
+  position: relative;
+  .ant-pagination {
+    margin: auto;
+    line-height: 50px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    .ant-pagination-options-quick-jumper {
+      line-height: 50px;
+    }
+  }
+}

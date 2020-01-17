@@ -1,0 +1,12 @@
+{
+	"list":[
+		{"goodsID":"00011","goodsname":"赵老师的猪黑色","price":118,"newprice":59,"src":"http://i3.vanclimg.com/cms/20181228/xhsm_03.jpg"},
+		{"goodsID":"00012","goodsname":"剪纸猪白色","price":118,"newprice":59,"src":"http://i3.vanclimg.com/cms/20181228/xhsm_05.jpg"},
+		{"goodsID":"00013","goodsname":"好小猪2黑色","price":118,"newprice":59,"src":"http://i3.vanclimg.com/cms/20181228/xhsm_07.jpg"},
+		{"goodsID":"00014","goodsname":"赵老师的猪白色","price":118,"newprice":59,"src":"http://i3.vanclimg.com/cms/20181228/xhsm_09.jpg"},
+		{"goodsID":"00015","goodsname":"好小猪9白色","price":118,"newprice":59,"src":"http://i3.vanclimg.com/cms/20181228/xhsm_13.jpg"},
+		{"goodsID":"00016","goodsname":"福黑色","price":118,"newprice":59,"src":"http://i3.vanclimg.com/cms/20181228/xhsm_15.jpg"},
+		{"goodsID":"00017","goodsname":"剪纸猪5","price":118,"newprice":59,"src":"http://i3.vanclimg.com/cms/20181228/xhsm_17.jpg"},
+		{"goodsID":"00018","goodsname":"睡猪黑色","price":118,"newprice":59,"src":"http://i3.vanclimg.com/cms/20181228/xhsm_19.jpg"}
+	]
+}

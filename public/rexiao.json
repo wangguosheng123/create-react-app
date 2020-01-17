@@ -1,0 +1,9 @@
+{
+	"list":[
+		{"goodsID":"00006","goodsname":"飞行夹克","price":198,"newprice":98,"src":"http://p3.vanclimg.com/232/232/product/6/3/7/6378000/mid/6378000-1j201710121408227197.jpg"},
+		{"goodsID":"00007","goodsname":"棒球服","price":138,"newprice":68,"src":"http://p3.vanclimg.com/232/232/product/6/3/7/6375417/mid/6375417-1j201710171656098481.jpg"},
+		{"goodsID":"00008","goodsname":"牛津夹克","price":138,"newprice":68,"src":"http://p3.vanclimg.com/232/232/product/6/3/7/6377947/mid/6377947-1j201709181637333848.jpg"},
+		{"goodsID":"00009","goodsname":"凡客卫衣","price":138,"newprice":58,"src":"http://p3.vanclimg.com/232/232/product/6/3/7/6378339/mid/6378339-1j201801111409218163.jpg"},
+		{"goodsID":"00010","goodsname":"针织衫","price":198,"newprice":88,"src":"http://p3.vanclimg.com/232/232/product/6/3/7/6375206/mid/6375206-1j201710131712143446.jpg"}
+	]
+}
