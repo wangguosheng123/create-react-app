@@ -1,6 +1,7 @@
 import { Form, Icon, Input, Button, Checkbox, Row, Col } from "antd";
 import FormItem from "antd/lib/form/FormItem";
 import React from "react";
+import { Redirect } from 'react-router-dom'
 
 import "./login.less";
 import { Foot } from "../../components/Foot";
@@ -20,14 +21,16 @@ class NormalLoginForm extends React.Component {
         let flag = false;
         for (var i = 0; i < users.length; i++) {
           let item = users[i];
-          if (item.name == username) {
-            if (item.pwd == userpwd) {
+          if (item.name === username) {
+            if (item.pwd === userpwd) {
               flag = true;
               alert("恭喜您，登录成功");
 
               localStorage.setItem("token", username);
-              window.location.href = "./home";
+              // window.location.href = "./home";
               // window.location.reload();
+              // return <Redirect to='/home' />
+              this.props.history.push("/home")
               return;
             } else {
               alert("密码输入错误，请重新输入");
@@ -38,9 +41,11 @@ class NormalLoginForm extends React.Component {
           }
         }
 
-        if (flag == false) {
+        if (flag === false) {
           alert("您目前还没有注册，即将前往注册");
-          window.location.href = "./zhuce";
+          // window.location.href = "./zhuce";
+          // return <Redirect to='/zhuce' />
+          this.props.history.push("/zhuce")
         }
       }
     });
@@ -118,7 +123,7 @@ class NormalLoginForm extends React.Component {
             </Row>
           </li>
         </ul>
-        <Foot></Foot>
+        <Foot/>
       </div>
     );
   }

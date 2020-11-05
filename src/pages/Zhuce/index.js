@@ -1,5 +1,6 @@
 import { Form, Input, Checkbox, Button, AutoComplete } from "antd";
 import React from "react";
+import { Redirect } from "react-router-dom";
 
 import { Foot } from "../../components/Foot";
 import "./zhuce.less";
@@ -27,34 +28,40 @@ class RegistrationForm extends React.Component {
         let flag = false;
 
         //判断之前有没有存过数据
-        if (users == null) {
+        if (users === null) {
           //如果没有存 则直接添加新值
           list.push(user);
           localStorage.setItem("users", JSON.stringify(list));
           alert("恭喜您，注册成功，即将前往登录页面");
-          window.location.href = "/login";
+          // window.location.href = "/login";
+          this.props.history.push("/login")
         } else {
           //如果之前存过值 则将原来的值取出来 转换成数组
           users = JSON.parse(users);
           //再加入新的值
           for (var i = 0; i < users.length; i++) {
             let name = users[i].name;
-            if (name == values.name) {
+            if (name === values.name) {
               flag = true;
               alert("您已经注册过了，即将前往登录页面");
-              window.location.href = "/login";
-              return;
+              // window.location.href = "/login";
+              // return;
+              // return <Redirect to='/login' />
+              this.props.history.push("/login")
             } else {
               flag = false;
             }
           }
-          if (flag == false) {
+          if (flag === false) {
             users.push(user);
             //再把加了新值的数组重新丢回到本地存储内
             list = users;
             localStorage.setItem("users", JSON.stringify(list));
             alert("恭喜您，注册成功，即将前往登录页");
-            window.location.href = "/login";
+            // window.location.href = "/login";
+            // return <Redirect to='/login' />
+            this.props.history.push("/login")
+            
           }
         }
       }
@@ -208,7 +215,7 @@ class RegistrationForm extends React.Component {
                 })(
                   <Checkbox>
                     我已经阅读
-                    <a href="javascript:;" style={{ marginRight: 120 }}>
+                    <a style={{ marginRight: 120 }}>
                       协议
                     </a>
                   </Checkbox>
@@ -223,7 +230,7 @@ class RegistrationForm extends React.Component {
             </Form>
           </li>
         </ul>
-        <Foot></Foot>
+        <Foot/>
       </div>
     );
   }

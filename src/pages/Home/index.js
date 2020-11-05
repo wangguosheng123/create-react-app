@@ -68,32 +68,36 @@ export class Home extends React.Component {
     let domList = [];
     let glist = [];
     rexiaoList.map(goods => {
-      domList.push(
-        <li key={goods.goodsID}>
-          <Link to={`/detail/${goods.goodsID}`}>
-            <div className="img-box">
-              <img src={goods.src} alt="" />
-            </div>
-            <div className="content">
-              <p className="p1">{goods.goodsname}</p>
-              <p className="p2">价格¥：{goods.price}元</p>
-              <p className="p3">活动价¥：{goods.newprice}元</p>
-            </div>
-          </Link>
-        </li>
+      return (
+        domList.push(
+          <li key={goods.goodsID}>
+            <Link to={`/detail/${goods.goodsID}`}>
+              <div className="img-box">
+                <img src={goods.src} alt="" />
+              </div>
+              <div className="content">
+                <p className="p1">{goods.goodsname}</p>
+                <p className="p2">价格¥：{goods.price}元</p>
+                <p className="p3">活动价¥：{goods.newprice}元</p>
+              </div>
+            </Link>
+          </li>
+        )
       );
     });
 
     txuList.map(goods => {
-      glist.push(
-        <li key={goods.goodsID}>
-          <Link to={`/detail/${goods.goodsID}`}>
-            <div className="img-box">
-              <img src={goods.src} alt="" />
-            </div>
-          </Link>
-        </li>
-      );
+      return (
+        glist.push(
+          <li key={goods.goodsID}>
+            <Link to={`/detail/${goods.goodsID}`}>
+              <div className="img-box">
+                <img src={goods.src} alt="" />
+              </div>
+            </Link>
+          </li>
+        )
+      )
     });
 
     return (
@@ -116,7 +120,7 @@ export class Home extends React.Component {
         <ul className="rexiao-list clr">{domList}</ul>
         <div className="txu">T恤上新</div>
         <ul className="txu-list clr">{glist}</ul>
-        <Foot></Foot>
+        <Foot/>
       </div>
     );
   }

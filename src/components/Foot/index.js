@@ -40,57 +40,57 @@ export class Foot extends React.Component {
         <div id="guanyu">
           <ul id="kefu">
             <li>
-              <a href="javascript:;">
+              <a >
                 <span id="kefu1">
                   <i className="iconfont">&#xe7bb;</i>
                 </span>
               </a>
-              <a href="javascript:;">
+              <a >
                 <p id="p1">7*9小时在线客服</p>
               </a>
             </li>
             <li>
-              <a href="javascript:;">
+              <a >
                 <span id="kefu2">
                   <i className="iconfont">&#xe67d;</i>
                 </span>
               </a>
-              <a href="javascript:;">
+              <a >
                 <p>7天内退货</p>
               </a>
-              <a href="javascript:;">
+              <a >
                 <p>购物满199元免运费</p>
               </a>
             </li>
             <li>
-              <a href="javascript:;">
+              <a >
                 <span id="kefu3">
                   <i className="iconfont">&#xe652;</i>
                 </span>
               </a>
-              <a href="javascript:;">
+              <a >
                 <p>下载凡客客户端</p>
               </a>
             </li>
           </ul>
           <ul id="guanYuFanKe">
             <li>
-              <a href="javascript:;">关于凡客</a>
+              <a >关于凡客</a>
             </li>
             <li>
-              <a href="javascript:;">新手指南</a>
+              <a >新手指南</a>
             </li>
             <li>
-              <a href="javascript:;">配送范围及时间</a>
+              <a >配送范围及时间</a>
             </li>
             <li>
-              <a href="javascript:;">支付方式</a>
+              <a >支付方式</a>
             </li>
             <li>
-              <a href="javascript:;">售后服务</a>
+              <a >售后服务</a>
             </li>
             <li>
-              <a href="javascript:;">帮助中心</a>
+              <a >帮助中心</a>
             </li>
           </ul>
         </div>
@@ -103,12 +103,12 @@ export class Foot extends React.Component {
           </p>
           <ul id="chengxing">
             <li>
-              <a href="javascript:;">
+              <a >
                 <img src={img4} alt="" />
               </a>
             </li>
             <li>
-              <a href="javascript:;">
+              <a >
                 <img src={img5} alt="" />
               </a>
             </li>
@@ -118,12 +118,12 @@ export class Foot extends React.Component {
               </a>
             </li>
             <li>
-              <a href="javascript:;">
+              <a >
                 <img src={img7} alt="" />
               </a>
             </li>
             <li>
-              <a href="javascript:;">
+              <a >
                 <img src={img8} alt="" />
               </a>
             </li>
@@ -132,13 +132,13 @@ export class Foot extends React.Component {
 
         <ul id="ding">
           <li>
-            <a href="javascript:;">
+            <a >
               <img src={img9} alt="" />
             </a>
             <p>下载APP</p>
           </li>
           <li>
-            <a href="javascript:;">
+            <a >
               <img src={img10} alt="" />
             </a>
             <p>在线客服</p>

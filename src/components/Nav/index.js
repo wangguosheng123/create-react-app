@@ -44,7 +44,7 @@ export class Nav extends React.Component {
     let { username } = this.state;
 
     let domdenglv =
-      username == null ? (
+      username === null ? (
         <a href="/login">登录</a>
       ) : (
         <span onClick={this.tuchudenglv}>{username}退出登录</span>

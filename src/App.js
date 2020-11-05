@@ -19,6 +19,7 @@ function App() {
     <div>
       <Nav></Nav>
       <Switch>
+        <Route path="/" component={Home} exact />
         <Route path="/home" component={Home} />
         <Route path="/goods" component={Goods} />
         <Route path="/zhuce" component={Zhuce} />

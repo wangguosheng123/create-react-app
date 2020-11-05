@@ -51,7 +51,7 @@ export class Shopcar extends React.Component {
   // 	let userid = localStorage.getItem("token")
   // 	let userids = localStorage.getItem(userid)
   // 	let  list = JSON.parse(userids)
-  // 	return caozuo=list.filter(function(item){  return item.goodsID==gid})
+  // 	return caozuo=list.filter(function(item){  return item.goodsID===gid})
   // }
   componentDidMount() {
     axios.get("/citylist/id/2").then(({ data }) => {
@@ -69,14 +69,14 @@ export class Shopcar extends React.Component {
     console.log("更新了", newlist);
     if (newlist) {
       var bool = newlist.every((ele, index) => {
-        if (ele.checked == 0) {
+        if (ele.checked === 0) {
           return true;
         } else {
           return false;
         }
       });
       // console.log(bool)
-      if (bool == true) {
+      if (bool === true) {
         this.refs.quanxuan.checked = true;
       } else {
         this.refs.quanxuan.checked = false;
@@ -88,8 +88,8 @@ export class Shopcar extends React.Component {
     let userids = localStorage.getItem(userid);
     let list = JSON.parse(userids);
     for (var i = 0; i < list.length; i++) {
-      if (i == index) {
-        if (list[i].num == 1) {
+      if (i === index) {
+        if (list[i].num === 1) {
           break;
         }
         list[i].num = list[i].num - 1;
@@ -109,7 +109,7 @@ export class Shopcar extends React.Component {
     let userids = localStorage.getItem(userid);
     let list = JSON.parse(userids);
     for (var i = 0; i < list.length; i++) {
-      if (i == index) {
+      if (i === index) {
         list[i].num += 1;
       }
     }
@@ -140,8 +140,8 @@ export class Shopcar extends React.Component {
     let userids = localStorage.getItem(userid);
     let newlist = JSON.parse(userids);
     let list = newlist.map((ele, index) => {
-      if (index == i) {
-        ele.checked = e.target.checked == true ? 0 : 1;
+      if (index === i) {
+        ele.checked = e.target.checked === true ? 0 : 1;
         return ele;
       } else {
         return ele;
@@ -158,7 +158,7 @@ export class Shopcar extends React.Component {
     let userid = localStorage.getItem("token");
     let userids = localStorage.getItem(userid);
     let newlist = JSON.parse(userids);
-    if (e.target.checked == true) {
+    if (e.target.checked === true) {
       let list = newlist.map((ele, index) => {
         ele.checked = 0;
         return ele;
@@ -167,7 +167,7 @@ export class Shopcar extends React.Component {
       this.setState({
         list
       });
-    } else if (e.target.checked == false) {
+    } else if (e.target.checked === false) {
       let list = newlist.map((ele, index) => {
         ele.checked = 1;
         return ele;
@@ -188,7 +188,7 @@ export class Shopcar extends React.Component {
     let userids = localStorage.getItem(userid);
     let list = JSON.parse(userids);
     list.forEach((ele, index) => {
-      if (ele.checked == 0) {
+      if (ele.checked === 0) {
         sum += ele.num * ele.newprice;
         jian += ele.num;
       }
@@ -199,7 +199,8 @@ export class Shopcar extends React.Component {
     });
   }
   quliebiao() {
-    window.location.href = "/goods";
+    // window.location.href = "/goods";
+    this.props.history.push("/goods")
   }
 
   //   地点的变化
@@ -208,7 +209,7 @@ export class Shopcar extends React.Component {
     var newsheng_select_id = document.getElementById("sheng").value; ////得到现在下拉框里面省份的id,因为id是唯一的
     var sheng_info = this.state.sheng_list.filter(function(shengfen) {
       ///此处里面的shengfen是从sheng_list取出来的每一省份
-      return shengfen.city_id == newsheng_select_id; ///因为shengfen是一个小的对象，所以点出里面的id,
+      return shengfen.city_id === newsheng_select_id; ///因为shengfen是一个小的对象，所以点出里面的id,
     })[0]; ///因为得到的是一个集合，所以取小标0， 最后就得到了下拉框里省份的小集合
     console.log(sheng_info);
     let shi_list = sheng_info["list"]; ///此处就得到了下拉框里面省份下面城市的集合
@@ -223,13 +224,13 @@ export class Shopcar extends React.Component {
     var newsheng_select_id = document.getElementById("sheng").value; ////得到现在下拉框里面省份的id,因为id是唯一的
     var sheng_info = this.state.sheng_list.filter(function(shengfen) {
       ///此处里面的shengfen是从sheng_list取出来的每一省份
-      return shengfen.city_id == newsheng_select_id; ///因为shengfen是一个小的对象，所以点出里面的id,
+      return shengfen.city_id === newsheng_select_id; ///因为shengfen是一个小的对象，所以点出里面的id,
     })[0]; ///因为得到的是一个集合，所以取小标0， 最后就得到了下拉框里省份的小集合
     var shi_list = sheng_info["list"]; ///此处就得到了下拉框里面省份下面城市的集合
     // console.log(shi_list)
 
     var shi_info = shi_list.filter(function(chengshi) {
-      return chengshi.city_id == newshi_select_id;
+      return chengshi.city_id === newshi_select_id;
     })[0];
     console.log(66666);
     let qu_list = shi_info["list"];
@@ -255,7 +256,7 @@ export class Shopcar extends React.Component {
           <div className="left clr">
             <input
               type="checkbox"
-              checked={car.checked == 0}
+              checked={car.checked === 0}
               onChange={this.getCheckedChange.bind(this, i)}
               defaultValue
             />
@@ -295,7 +296,7 @@ export class Shopcar extends React.Component {
     ));
 
     let qudom =
-      this.state.style == 1 ? (
+      this.state.style === 1 ? (
         <option value=""></option>
       ) : (
         quList.map(qu => (
@@ -373,7 +374,7 @@ export class Shopcar extends React.Component {
           区 <input type="text" placeholder="请填写详细地址" />{" "}
           <span className="jiesuan">&hearts;结算&gt;&gt;</span>
         </div>
-        <Foot></Foot>
+        <Foot/>
       </div>
     );
   }

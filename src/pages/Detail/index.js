@@ -1,6 +1,8 @@
 import axios from "axios";
 import React from "react";
 import { Button } from "antd";
+// import { Redirect } from 'react-router-dom'
+
 
 import "./detail.less";
 
@@ -22,7 +24,7 @@ export class Detail extends React.Component {
     axios.get("/liebiao.json").then(({ data }) => {
       for (let i = 0; i < data.list.length; i++) {
         let goodsID = data.list[i].goodsID;
-        if (goodsid == goodsID) {
+        if (goodsid === goodsID) {
           console.log(data.list[i]);
           return this.setState({
             goods: data.list[i]
@@ -47,13 +49,13 @@ export class Detail extends React.Component {
         userids = JSON.parse(userids);
         for (let i = 0; i < shu.length; i++) {
           let item = shu[i];
-          if (item.goodsID == goodid) {
+          if (item.goodsID === goodid) {
             item.num = 1;
             item.checked = 1;
             goods1 = item;
           }
         }
-        if (userids == null || userids.length === 0) {
+        if (userids === null || userids.length === 0) {
           //如果没有存 则直接添加新值
           // console.log(goods1)
           list.push(goods1);
@@ -62,7 +64,7 @@ export class Detail extends React.Component {
           //再加入新的值
           for (let i = 0; i < userids.length; i++) {
             let numitem = userids[i];
-            if (numitem.goodsID == goodid) {
+            if (numitem.goodsID === goodid) {
               // console.log(numitem.goodsID)
               numitem.num++;
               flag = true;
@@ -79,11 +81,15 @@ export class Detail extends React.Component {
         }
         localStorage.setItem(userid, JSON.stringify(list));
         if (window.confirm("加入成功 是否进入购物车结算")) {
-          window.location.href = "/shopCar";
+          // window.location.href = "/shopCar";
+        //  return <Redirect to='/shopCar' />
+        this.props.history.push("/shopCar")
         }
       } else {
         alert("您目前还没有登录，即将前往登录页面");
-        window.location.href = "/login";
+        // window.location.href = "/login";
+        // return <Redirect to='/login' />
+        this.props.history.push("/login")
       }
     });
   }
@@ -102,13 +108,13 @@ export class Detail extends React.Component {
         userids = JSON.parse(userids);
         for (var i = 0; i < shu.length; i++) {
           let item = shu[i];
-          if (item.goodsID == goodid) {
+          if (item.goodsID === goodid) {
             item.num = 1;
             item.checked = 1;
             goods1 = item;
           }
         }
-        if (userids == null || userids.length == 0) {
+        if (userids === null || userids.length === 0) {
           //如果没有存 则直接添加新值
           // console.log(goods1)
           list.push(goods1);
@@ -117,7 +123,7 @@ export class Detail extends React.Component {
           //再加入新的值
           for (let i = 0; i < userids.length; i++) {
             let numitem = userids[i];
-            if (numitem.goodsID == goodid) {
+            if (numitem.goodsID === goodid) {
               // console.log(numitem.goodsID)
               numitem.num++;
               flag = true;
@@ -145,7 +151,7 @@ export class Detail extends React.Component {
   render() {
     let { goods } = this.state;
     let domlist =
-      goods == null ? (
+      goods === null ? (
         <h1>玩命加载中</h1>
       ) : (
         <div>
