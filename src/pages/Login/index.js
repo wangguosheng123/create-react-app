@@ -1,7 +1,6 @@
+import React from "react";
 import { Form, Icon, Input, Button, Checkbox, Row, Col } from "antd";
 import FormItem from "antd/lib/form/FormItem";
-import React from "react";
-import { Redirect } from 'react-router-dom'
 
 import "./login.less";
 import { Foot } from "../../components/Foot";
@@ -50,6 +49,9 @@ class NormalLoginForm extends React.Component {
       }
     });
   };
+  quzhuce =()=>{
+    this.props.history.push("/zhuce")
+  }
 
   render() {
     const { getFieldDecorator } = this.props.form;
@@ -105,7 +107,7 @@ class NormalLoginForm extends React.Component {
                       valuePropName: "checked",
                       initialValue: true
                     })(<Checkbox>记住密码</Checkbox>)}
-                    <a style={{ marginLeft: 90 }} href="zhuce">
+                    <a style={{ marginLeft: 90 }} onClick={this.quzhuce}>
                       去注册
                     </a>
                   </Form.Item>

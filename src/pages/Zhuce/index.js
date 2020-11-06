@@ -1,6 +1,6 @@
 import { Form, Input, Checkbox, Button, AutoComplete } from "antd";
 import React from "react";
-import { Redirect } from "react-router-dom";
+// import { Redirect } from "react-router-dom";
 
 import { Foot } from "../../components/Foot";
 import "./zhuce.less";
@@ -119,6 +119,9 @@ class RegistrationForm extends React.Component {
     }
     this.setState({ autoCompleteResult });
   };
+  qulogin =()=>{
+    this.props.history.push("/login")
+  }
 
   render() {
     const { getFieldDecorator } = this.props.form;
@@ -220,7 +223,7 @@ class RegistrationForm extends React.Component {
                     </a>
                   </Checkbox>
                 )}
-                已注册，去<a href="login">登录</a>
+                已注册，去<a onClick={this.qulogin}>登录</a>
               </Form.Item>
               <Form.Item {...tailFormItemLayout}>
                 <Button type="primary" htmlType="submit">

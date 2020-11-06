@@ -140,13 +140,17 @@ export class Detail extends React.Component {
         }
         localStorage.setItem(userid, JSON.stringify(list));
         alert("加入成功 即将进入购物车结算页面");
-        window.location.href = "/shopCar";
+        // window.location.href = "/shopCar";
+        this.props.history.push("/shopCar")
+
       } else {
         alert("您目前还没有登录，即将前往登录页面");
-        window.location.href = "/login";
+        // window.location.href = "/login";
+        this.props.history.push("/login")
       }
     });
   }
+  
 
   render() {
     let { goods } = this.state;

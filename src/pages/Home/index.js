@@ -41,7 +41,7 @@ export class Home extends React.Component {
   }
 
   countFun() {
-    let end = Date.parse(new Date("2020-01-24"));
+    let end = Date.parse(new Date("2020-12-31"));
     let now = Date.parse(new Date());
     let msec = end - now;
 

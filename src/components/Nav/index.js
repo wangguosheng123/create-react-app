@@ -40,12 +40,17 @@ export class Nav extends React.Component {
       username: null
     });
   }
+  tiaoZhuan=(type)=>{
+    // this.props.history.push(`/${type}`)
+    this.props.history.push("/home")
+  }
   render() {
     let { username } = this.state;
 
     let domdenglv =
       username === null ? (
-        <a href="/login">登录</a>
+        // <a  onClick={()=>this.tiaoZhuan("login")}>登录</a>
+        <NavLink to='/login'>登录</NavLink>
       ) : (
         <span onClick={this.tuchudenglv}>{username}退出登录</span>
       );
@@ -62,13 +67,16 @@ export class Nav extends React.Component {
       <div>
         <ul className="top">
           <li>
-            <a href="/shopcar">购物车</a>
+            {/* <a  onClick={()=>this.tiaoZhuan("shopcar")}>购物车</a> */}
+            <NavLink to='/shopcar'>购物车</NavLink>
           </li>
           <li>
-            <a href="/zhuce">注册</a>
+            {/* <a  onClick={()=>this.tiaoZhuan("zhuce")}>注册</a> */}
+            <NavLink to='/zhuce'>注册</NavLink>
           </li>
           <li>
-            <a href="/home">欢迎您</a>
+            {/* <a  onClick={()=>this.tiaoZhuan("home")}>欢迎您</a> */}
+            <NavLink to='/home'>欢迎您</NavLink>
           </li>
           <li>{domdenglv}</li>
         </ul>
@@ -77,7 +85,8 @@ export class Nav extends React.Component {
           <Header>
             <div className="logo">
               <img
-                src="http://i4.vanclimg.com/cms/20160923/logo18546.png"
+                // src="http://i4.vanclimg.com/cms/20160923/logo18546.png"
+                src=""
                 alt=""
               ></img>
             </div>

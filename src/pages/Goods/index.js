@@ -83,14 +83,14 @@ export class Goods extends React.Component {
         localStorage.setItem(userid, JSON.stringify(list));
         if (window.confirm("加入成功 是否进入购物车结算")) {
           // window.location.href = "./shopCar";
-          this.props.history.push("./shopCar")
+          this.props.history.push("/shopCar")
           // return <Redirect to='/shopCar' />
         }
       } else {
         alert("您目前还没有登录，即将前往登录页面");
         // window.location.href = "./login";
         // return <Redirect to='/login' />
-        this.props.history.push("./login")
+        this.props.history.push("/login")
       }
     });
   }
